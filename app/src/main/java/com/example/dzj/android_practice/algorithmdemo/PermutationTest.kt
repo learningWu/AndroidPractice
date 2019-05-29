@@ -8,7 +8,6 @@ import android.util.Log
 
 class PermutationTest {
     val password = "eeab"
-
     val targetArray = arrayOf("a", "b", "c", "d", "e")
     fun main() {
         compose(ArrayList<String>())
@@ -16,11 +15,6 @@ class PermutationTest {
 
     private fun compose(arrayList: ArrayList<String>) {
         if (arrayList.size == password.length) {
-//            var result = ""
-//            arrayList.forEach {
-//                result += it
-//            }
-//            Log.d("结果：", result)
             compare(arrayList)
             return
         }
@@ -44,7 +38,7 @@ class PermutationTest {
             arrayList.forEach {
                 result += it
             }
-            Log.d("结果：", result)
+            Log.d("计算结果：", " 比对结果：${result}")
         }
     }
 }

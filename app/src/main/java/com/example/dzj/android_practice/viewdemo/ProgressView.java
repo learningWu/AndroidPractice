@@ -1,4 +1,4 @@
-package com.example.dzj.android_practice;
+package com.example.dzj.android_practice.viewdemo;
 
 import android.animation.ValueAnimator;
 import android.content.Context;
