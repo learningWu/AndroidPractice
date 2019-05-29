@@ -4,10 +4,13 @@ import android.content.Context
 import android.graphics.*
 import android.util.AttributeSet
 import android.widget.FrameLayout
+import com.example.dzj.android_practice.R
 import com.example.dzj.android_practice.kotlindemo.dpToPx
 
 
-class RoundRectLayout(context: Context, attributeSet: AttributeSet? = null) : FrameLayout(context, attributeSet) {
+class RoundRectLayout(context: Context) : FrameLayout(context) {
+
+
     /**
      * 开启描边，便于演示效果
      */
@@ -18,33 +21,47 @@ class RoundRectLayout(context: Context, attributeSet: AttributeSet? = null) : Fr
     /**
      * 左上角 圆角大小
      */
-    private var leftTopRound: Float
+    private var leftTopRound: Float = 0f
     /**
      * 右上角 圆角大小
      */
-    private var rightTopRound: Float
+    private var rightTopRound: Float = 0f
     /**
      * 右下角 圆角大小
      */
-    private var leftBottomRound: Float
+    private var leftBottomRound: Float = 0f
     /**
      * 左下角 圆角大小
      */
-    private var rightBottomRound: Float
+    private var rightBottomRound: Float = 0f
 
-    init {
-        leftTopRound = dpToPx(20)
-        rightTopRound = dpToPx(20)
-        leftBottomRound = dpToPx(20)
-        rightBottomRound = dpToPx(20)
+    /**
+     * 全部圆角
+     */
+    private var round: Float = 0f
+
+    constructor(context: Context, attributeSet: AttributeSet) : this(context) {
+        val obtainStyledAttributes = getContext().obtainStyledAttributes(attributeSet, R.styleable.RoundRectLayout)
+        round = obtainStyledAttributes.getDimension(R.styleable.RoundRectLayout_round, round)
+        leftTopRound = obtainStyledAttributes.getDimension(R.styleable.RoundRectLayout_leftTopRound, leftTopRound)
+        rightTopRound = obtainStyledAttributes.getDimension(R.styleable.RoundRectLayout_rightTopRound, rightTopRound)
+        rightBottomRound = obtainStyledAttributes.getDimension(R.styleable.RoundRectLayout_rightBottomRound, rightBottomRound)
+        leftBottomRound = obtainStyledAttributes.getDimension(R.styleable.RoundRectLayout_leftBottomRound, leftBottomRound)
+        if (round != 0f) {
+            //不知道为啥 不能 leftTopRound=rightTopRound=rightBottomRound=leftBottomRound = round
+            leftTopRound = round
+            rightTopRound = round
+            rightBottomRound = round
+            leftBottomRound = round
+        }
+        obtainStyledAttributes.recycle()
     }
 
     override fun dispatchDraw(canvas: Canvas) {
-
-        val round = dpToPx(20)
         //dx,dy 成对出现，控制上右下左，四个位置圆角
-        val array = floatArrayOf(round, round, round, round, round, round, round, round);
+        val array = floatArrayOf(leftTopRound, leftTopRound, rightTopRound, rightTopRound, rightBottomRound, rightBottomRound, leftBottomRound, leftBottomRound);
         mPath.addRoundRect(RectF(0f, 0f, width.toFloat(), height.toFloat()), array, Path.Direction.CW)
+        //描边用于演示
         drawStroke(canvas)
         canvas.clipPath(mPath)
         super.dispatchDraw(canvas)
@@ -57,7 +74,7 @@ class RoundRectLayout(context: Context, attributeSet: AttributeSet? = null) : Fr
         if (mOpenStroke) {
             mPaint.color = Color.RED
             mPaint.style = Paint.Style.STROKE
-            mPaint.strokeWidth = dpToPx(3)
+            mPaint.strokeWidth = dpToPx(3f)
             canvas.drawPath(mPath, mPaint)
         }
     }

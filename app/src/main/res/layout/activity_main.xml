@@ -7,121 +7,136 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <LinearLayout
-        android:id="@+id/example_1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="20dp"
+    <!--<LinearLayout-->
+        <!--android:id="@+id/example_1"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:padding="20dp"-->
+        <!--app:layout_constraintLeft_toLeftOf="parent"-->
+        <!--app:layout_constraintRight_toRightOf="parent"-->
+        <!--app:layout_constraintTop_toTopOf="parent">-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/describe_1"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:text="图片圆角："-->
+            <!--android:textColor="#333333"-->
+            <!--android:textSize="20sp" />-->
+
+        <!--<com.example.dzj.android_practice.viewdemo.RoundRectLayout-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--app:round="20dp"-->
+            <!--app:layout_constraintLeft_toLeftOf="parent"-->
+            <!--app:layout_constraintTop_toTopOf="parent">-->
+
+            <!--<ImageView-->
+                <!--android:layout_width="100dp"-->
+                <!--android:layout_height="100dp"-->
+                <!--android:background="@mipmap/spid" />-->
+        <!--</com.example.dzj.android_practice.viewdemo.RoundRectLayout>-->
+
+    <!--</LinearLayout>-->
+
+    <!--<LinearLayout-->
+        <!--android:id="@+id/example_2"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:padding="20dp"-->
+        <!--app:layout_constraintLeft_toLeftOf="parent"-->
+        <!--app:layout_constraintRight_toRightOf="parent"-->
+        <!--app:layout_constraintTop_toBottomOf="@id/example_1">-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/describe_2"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:text="TextView圆角："-->
+            <!--android:textColor="#333333"-->
+            <!--android:textSize="20sp" />-->
+
+        <!--<com.example.dzj.android_practice.viewdemo.RoundRectLayout-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--app:layout_constraintLeft_toLeftOf="parent"-->
+            <!--app:layout_constraintTop_toBottomOf="@id/example_1">-->
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:padding="20dp"-->
+                <!--android:background="@color/white"-->
+                <!--android:text="TextView：有种把我圆角" />-->
+        <!--</com.example.dzj.android_practice.viewdemo.RoundRectLayout>-->
+
+    <!--</LinearLayout>-->
+
+    <!--<LinearLayout-->
+        <!--android:id="@+id/example_3"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:padding="20dp"-->
+        <!--app:layout_constraintLeft_toLeftOf="parent"-->
+        <!--app:layout_constraintRight_toRightOf="parent"-->
+        <!--app:layout_constraintTop_toBottomOf="@id/example_2">-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/describe_3"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:text="布局圆角："-->
+            <!--android:textColor="#333333"-->
+            <!--android:textSize="20sp" />-->
+
+        <!--<com.example.dzj.android_practice.viewdemo.RoundRectLayout-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--app:layout_constraintLeft_toLeftOf="parent"-->
+            <!--app:layout_constraintTop_toBottomOf="@id/example_2">-->
+
+            <!--<RelativeLayout-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:background="@color/white"-->
+                <!--android:padding="10dp">-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/text_view"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="RelativeLayout布局" />-->
+
+                <!--<ImageView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_below="@id/text_view"-->
+                    <!--android:layout_centerInParent="true"-->
+                    <!--android:background="@drawable/ic_launcher_background" />-->
+            <!--</RelativeLayout>-->
+        <!--</com.example.dzj.android_practice.viewdemo.RoundRectLayout>-->
+
+    <!--</LinearLayout>-->
+
+    <com.example.dzj.android_practice.viewdemo.RoundAngleImageView
+        android:id="@+id/raiv"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:round="20dp"
+        android:background="@mipmap/spid"/>
 
-        <TextView
-            android:id="@+id/describe_1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="图片圆角："
-            android:textColor="#333333"
-            android:textSize="20sp" />
-
-        <com.example.dzj.android_practice.viewdemo.RoundRectLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:background="@mipmap/spid" />
-        </com.example.dzj.android_practice.viewdemo.RoundRectLayout>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/example_2"
-        android:layout_width="match_parent"
+    <com.example.dzj.android_practice.viewdemo.XfermodeView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="20dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/example_1">
-
-        <TextView
-            android:id="@+id/describe_2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="TextView圆角："
-            android:textColor="#333333"
-            android:textSize="20sp" />
-
-        <com.example.dzj.android_practice.viewdemo.RoundRectLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/example_1">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="20dp"
-                android:background="@color/white"
-                android:text="TextView：有种把我圆角" />
-        </com.example.dzj.android_practice.viewdemo.RoundRectLayout>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/example_3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="20dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/example_2">
-
-        <TextView
-            android:id="@+id/describe_3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="布局圆角："
-            android:textColor="#333333"
-            android:textSize="20sp" />
-
-        <com.example.dzj.android_practice.viewdemo.RoundRectLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/example_2">
-
-            <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@color/white"
-                android:padding="10dp">
-
-                <TextView
-                    android:id="@+id/text_view"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="RelativeLayout布局" />
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/text_view"
-                    android:layout_centerInParent="true"
-                    android:background="@drawable/ic_launcher_background" />
-            </RelativeLayout>
-        </com.example.dzj.android_practice.viewdemo.RoundRectLayout>
-
-    </LinearLayout>
-
-
+        app:layout_constraintTop_toBottomOf="@id/raiv"
+        app:layout_constraintLeft_toLeftOf="@id/raiv"
+        />
 </android.support.constraint.ConstraintLayout>

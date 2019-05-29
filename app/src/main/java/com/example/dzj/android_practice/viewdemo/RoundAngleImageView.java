@@ -10,16 +10,17 @@ import android.graphics.Path;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffXfermode;
 import android.graphics.RectF;
+import android.support.v7.widget.AppCompatImageView;
 import android.util.AttributeSet;
-import android.widget.ImageView;
 
-import com.common.base.R;
+import com.example.dzj.android_practice.R;
+
 
 /**
  * Created by think on 17/7/12.
  */
 
-public class RoundAngleImageView extends ImageView {
+public class RoundAngleImageView extends AppCompatImageView {
 
     private Paint paint;
 
@@ -93,7 +94,7 @@ public class RoundAngleImageView extends ImageView {
             drawLiftDown(canvas2);
             drawRightUp(canvas2);
             drawRightDown(canvas2);
-            canvas.drawBitmap(bitmap, 0, 0, paint2);
+//            canvas.drawBitmap(bitmap, 0, 0, paint2);
             bitmap.recycle();
         }
     }
