@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:text="RoundRectLayout"
         android:textSize="20sp"
-        android:textColor="@color/font"
+        android:textColor="@color/font_333333"
         android:padding="10dp"
         android:background="@drawable/round_rect_shape" />
 
