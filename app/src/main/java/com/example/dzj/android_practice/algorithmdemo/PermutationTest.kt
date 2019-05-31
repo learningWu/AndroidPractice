@@ -3,7 +3,7 @@ package com.example.dzj.android_practice.algorithmdemo
 import android.util.Log
 
 /**
- * 排列组合问题
+ * 排列问题  暴力破解密码
  */
 
 class PermutationTest {
