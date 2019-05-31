@@ -35,7 +35,7 @@ ext {
                     "glide"                     : "com.github.bumptech.glide:glide:4.8.0",
                     "glide-transformations"     : "jp.wasabeef:glide-transformations:4.0.1",
                     "shadow-layout"             : "com.github.dmytrodanylyk.shadow-layout:library:1.0.3",
-                    "butterknife"               : "com.jakewharton:butterknife:8.5.1",
+                    "butterknife"               : "com.jakewharton:butterknife:10.1.0",
                     "photoview"                 : "com.github.chrisbanes:PhotoView:2.1.4",
                     "banner"                    : "com.youth.banner:banner:1.4.10",
                     "vlayout"                   : "com.alibaba.android:vlayout:1.2.17@aar",
@@ -61,7 +61,7 @@ ext {
                     "zxing-core"                : "com.google.zxing:core:3.3.3",
                     "numberprogressbar"         : "com.daimajia.numberprogressbar:library:1.2@aar"]
 
-    annotationProcessor = ["butterknife"   : "com.jakewharton:butterknife-compiler:8.5.1",
+    annotationProcessor = ["butterknife"   : "com.jakewharton:butterknife-compiler:10.1.0",
                            "activityrouter": "com.github.mzule.activityrouter:compiler:1.1.7",
                            "glidecompiler"  : 'com.github.bumptech.glide:compiler:4.8.0']
 
