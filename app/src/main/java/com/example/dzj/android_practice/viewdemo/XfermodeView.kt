@@ -4,6 +4,7 @@ import android.content.Context
 import android.graphics.*
 import android.graphics.BitmapFactory.decodeResource
 import android.util.AttributeSet
+import android.view.LayoutInflater
 import android.view.View
 import com.example.dzj.android_practice.R
 import java.util.jar.Attributes

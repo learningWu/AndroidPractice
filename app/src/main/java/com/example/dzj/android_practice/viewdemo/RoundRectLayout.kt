@@ -58,12 +58,16 @@ class RoundRectLayout(context: Context) : FrameLayout(context) {
     }
 
     override fun dispatchDraw(canvas: Canvas) {
+        //1.
         //dx,dy 成对出现，控制上右下左，四个位置圆角
         val array = floatArrayOf(leftTopRound, leftTopRound, rightTopRound, rightTopRound, rightBottomRound, rightBottomRound, leftBottomRound, leftBottomRound);
         mPath.addRoundRect(RectF(0f, 0f, width.toFloat(), height.toFloat()), array, Path.Direction.CW)
+        //2.
         //描边用于演示
         drawStroke(canvas)
+        //3.
         canvas.clipPath(mPath)
+        //4.
         super.dispatchDraw(canvas)
     }
 

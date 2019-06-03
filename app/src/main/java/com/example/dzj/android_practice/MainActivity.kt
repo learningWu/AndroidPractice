@@ -8,6 +8,7 @@ import android.view.View
 import androidx.annotation.UiThread
 import butterknife.ButterKnife
 import butterknife.OnClick
+import com.example.dzj.android_practice.concurrentdemo.FutureTest
 import com.example.dzj.android_practice.networkdemo.RetrofitTest
 
 class MainActivity : AppCompatActivity() {
@@ -18,7 +19,7 @@ class MainActivity : AppCompatActivity() {
             setContentView(view)
             ButterKnife.bind(this@MainActivity)
         }
-        RetrofitTest().main()
+        FutureTest().main()
 
     }
 

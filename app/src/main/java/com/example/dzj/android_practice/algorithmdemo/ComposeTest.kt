@@ -6,4 +6,16 @@ package com.example.dzj.android_practice.algorithmdemo
  */
 class ComposeTest {
 
+    fun main() {
+        //初始化所有人
+        val peoples = ArrayList<Int>()
+        for (i in 0..99) {
+            peoples.add(i)
+        }
+
+    }
+
+    fun compose() {
+
+    }
 }
