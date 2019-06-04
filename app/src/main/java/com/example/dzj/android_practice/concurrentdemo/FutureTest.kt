@@ -12,7 +12,7 @@ class FutureTest {
         val newCachedThreadPool = Executors.newCachedThreadPool()
         val submit = newCachedThreadPool.submit(Task())
         newCachedThreadPool.shutdown()
-        System.out.println("task运行结果" + submit.get());
+        System.out.println("task运行结果" + submit.get())
     }
 
     fun futureTaskWithCallable(): Unit {
@@ -21,13 +21,13 @@ class FutureTest {
         val futureTask = FutureTask<Int>(Task())
         newCachedThreadPool.submit(futureTask)
         newCachedThreadPool.shutdown()
-        System.out.println("task运行结果ExecutorService:" + futureTask.get());
+        System.out.println("task运行结果ExecutorService:" + futureTask.get())
 
         //第二种方式 Thread
         val futureTask2 = FutureTask<Int>(Task())
         val thread = Thread(futureTask2)
         thread.start()
-        System.out.println("task运行结果Thread:" + futureTask2.get());
+        System.out.println("task运行结果Thread:" + futureTask2.get())
 
     }
 

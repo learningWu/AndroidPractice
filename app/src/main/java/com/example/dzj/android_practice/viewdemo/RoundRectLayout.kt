@@ -1,5 +1,6 @@
 package com.example.dzj.android_practice.viewdemo
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.*
 import android.util.AttributeSet
@@ -40,9 +41,17 @@ class RoundRectLayout(context: Context) : FrameLayout(context) {
      */
     private var round: Float = 0f
 
+    @SuppressLint("ResourceType")
     constructor(context: Context, attributeSet: AttributeSet) : this(context) {
         val obtainStyledAttributes = getContext().obtainStyledAttributes(attributeSet, R.styleable.RoundRectLayout)
         round = obtainStyledAttributes.getDimension(R.styleable.RoundRectLayout_round, round)
+        leftTopRound = obtainStyledAttributes.getDimension(R.styleable.RoundRectLayout_leftTopRound, leftTopRound)
+
+        //第二种获取属性值的方法,(styleable的原理)
+//        val obtainStyledAttributesWithAttrArray = getContext().obtainStyledAttributes(attributeSet, intArrayOf(R.attr.round,R.attr.leftTopRound,R.attr))
+//        round = obtainStyledAttributesWithAttrArray.getDimension(0, round)
+//        leftTopRound= obtainStyledAttributesWithAttrArray.getDimension(1, leftTopRound)
+
         leftTopRound = obtainStyledAttributes.getDimension(R.styleable.RoundRectLayout_leftTopRound, leftTopRound)
         rightTopRound = obtainStyledAttributes.getDimension(R.styleable.RoundRectLayout_rightTopRound, rightTopRound)
         rightBottomRound = obtainStyledAttributes.getDimension(R.styleable.RoundRectLayout_rightBottomRound, rightBottomRound)

@@ -44,6 +44,7 @@ dependencies {
     implementation rootProject.ext.dependencies["butterknife"]
     implementation rootProject.ext.dependencies["okhttp-logging-interceptor"]
     kapt rootProject.ext.annotationProcessor["butterknife"]
+    implementation project(':annotationprocessor')
 //    implementation 'org.ow2.asm:asm:6.0'
 //    implementation 'org.ow2.asm:asm-util:6.0'
 }
