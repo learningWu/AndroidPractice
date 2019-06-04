@@ -7,13 +7,15 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.PointF;
 import android.os.Build;
-import androidx.annotation.Nullable;
-import androidx.annotation.RequiresApi;
-
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.animation.LinearInterpolator;
 
+import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
+
+import com.eddie.annotationprocessor.CheckGetAnnotation;
+@CheckGetAnnotation
 public class ProgressView extends View {
 
     /**
@@ -31,6 +33,8 @@ public class ProgressView extends View {
     private PointF centerPoint;
     private TwoPoint[] points = new TwoPoint[5];
     private Paint paint;
+
+    public void getPaint(){}
     private ValueAnimator lengthChangeAnimator;
 
     {
