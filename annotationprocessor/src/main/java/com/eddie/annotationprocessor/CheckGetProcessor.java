@@ -30,7 +30,7 @@ public class CheckGetProcessor extends AbstractProcessor {
 //            processingEnv.getMessager().printMessage(Diagnostic.Kind.NOTE,"annotation："+annotaredClass.getSimpleName());
             for (VariableElement field : ElementFilter.fieldsIn(annotaredClass.getEnclosedElements())) {
                 if (!containsGetter(annotaredClass, field.getSimpleName().toString())) {
-                    processingEnv.getMessager().printMessage(Diagnostic.Kind.ERROR, String.format("getter not found for '%s.%s'", annotaredClass.getSimpleName(), field.getSimpleName()));
+//                    processingEnv.getMessager().printMessage(Diagnostic.Kind.ERROR, String.format("getter not found for '%s.%s'", annotaredClass.getSimpleName(), field.getSimpleName()));
                 }
             }
         }

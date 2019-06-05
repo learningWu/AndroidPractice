@@ -25,11 +25,15 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    @OnClick(R.id.tv_to_round_layout_activity)
+    @OnClick(R.id.tv_to_round_layout_activity,R.id.tv_to_sub_thread_update_ui_activity)
     fun onClick(view: View) {
         when (view.id) {
             R.id.tv_to_round_layout_activity -> {
                 val intent = Intent(this@MainActivity, RoundLayoutShowActivity::class.java);
+                startActivity(intent)
+            }
+            R.id.tv_to_sub_thread_update_ui_activity->{
+                val intent = Intent(this@MainActivity, SubThreadUpdateUiActivity::class.java);
                 startActivity(intent)
             }
         }

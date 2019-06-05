@@ -8,4 +8,14 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="actvitiy_main_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/font_333333</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:background">@drawable/round_rect_shape</item>
+        <item name="android:layout_margin">10dp</item>
+    </style>
+
 </resources>
