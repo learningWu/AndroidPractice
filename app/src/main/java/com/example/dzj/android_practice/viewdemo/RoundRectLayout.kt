@@ -48,9 +48,10 @@ class RoundRectLayout(context: Context) : FrameLayout(context) {
         leftTopRound = obtainStyledAttributes.getDimension(R.styleable.RoundRectLayout_leftTopRound, leftTopRound)
 
         //第二种获取属性值的方法,(styleable的原理)
-//        val obtainStyledAttributesWithAttrArray = getContext().obtainStyledAttributes(attributeSet, intArrayOf(R.attr.round,R.attr.leftTopRound,R.attr))
+//        val obtainStyledAttributesWithAttrArray = getContext().obtainStyledAttributes(attributeSet, intArrayOf(R.attr.round,R.attr.leftTopRound,android.R.attr.id))
 //        round = obtainStyledAttributesWithAttrArray.getDimension(0, round)
 //        leftTopRound= obtainStyledAttributesWithAttrArray.getDimension(1, leftTopRound)
+//        var id=obtainStyledAttributesWithAttrArray.getInteger(2,0)
 
         leftTopRound = obtainStyledAttributes.getDimension(R.styleable.RoundRectLayout_leftTopRound, leftTopRound)
         rightTopRound = obtainStyledAttributes.getDimension(R.styleable.RoundRectLayout_rightTopRound, rightTopRound)
@@ -90,5 +91,12 @@ class RoundRectLayout(context: Context) : FrameLayout(context) {
             mPaint.strokeWidth = dpToPx(3f)
             canvas.drawPath(mPath, mPaint)
         }
+    }
+
+    /**
+     * 避免默认以为子view在滑动控件内，需要有个延迟点击的效果。
+     */
+    override fun shouldDelayChildPressedState(): Boolean {
+        return false
     }
 }
