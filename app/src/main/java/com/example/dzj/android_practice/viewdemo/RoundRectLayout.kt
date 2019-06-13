@@ -6,7 +6,7 @@ import android.graphics.*
 import android.util.AttributeSet
 import android.widget.FrameLayout
 import com.example.dzj.android_practice.R
-import com.example.dzj.android_practice.kotlindemo.dpToPx
+import com.example.dzj.android_practice.util.dpToPx
 
 
 class RoundRectLayout(context: Context) : FrameLayout(context) {

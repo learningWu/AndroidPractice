@@ -1,4 +1,4 @@
-package com.example.dzj.android_practice.kotlindemo
+package com.example.dzj.android_practice.util
 
 import android.content.res.Resources
 

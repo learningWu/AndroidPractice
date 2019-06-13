@@ -39,12 +39,16 @@ dependencies {
     implementation 'com.squareup.retrofit2:retrofit:2.5.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
     implementation 'com.squareup.retrofit2:adapter-rxjava2:2.5.0'
-    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.5.0'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation rootProject.ext.dependencies["butterknife"]
     implementation rootProject.ext.dependencies["okhttp-logging-interceptor"]
     kapt rootProject.ext.annotationProcessor["butterknife"]
     implementation project(':annotationprocessor')
+    implementation rootProject.ext.dependencies["glide-transformations"]
+    implementation(rootProject.ext.dependencies["glide"]){
+        exclude group: "com.android.support"
+    }
+    kapt (rootProject.ext.annotationProcessor["glidecompiler"])
 //    implementation 'org.ow2.asm:asm:6.0'
 //    implementation 'org.ow2.asm:asm-util:6.0'
 }
