@@ -7,12 +7,14 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.PointF;
 import android.os.Build;
+import android.transition.TransitionManager;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.animation.LinearInterpolator;
 
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
+import androidx.constraintlayout.widget.ConstraintSet;
 
 import com.eddie.annotationprocessor.CheckGetAnnotation;
 @CheckGetAnnotation
@@ -42,7 +44,7 @@ public class ProgressView extends View {
         paint = new Paint(Paint.ANTI_ALIAS_FLAG);
         paint.setColor(Color.parseColor("#08AEAB"));
         paint.setStrokeCap(Paint.Cap.ROUND);
-
+        TransitionManager.beginDelayedTransition();
 
     }
 
