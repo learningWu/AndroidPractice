@@ -18,6 +18,7 @@ import com.example.dzj.android_practice.classdemo.AnnotationTest
 import com.example.dzj.android_practice.concurrentdemo.FutureTest
 import com.example.dzj.android_practice.iodemo.BitmapDecodeTest
 import com.example.dzj.android_practice.networkdemo.RetrofitTest
+import com.example.dzj.android_practice.otherdemo.BigBitmapTest
 
 class MainActivity : AppCompatActivity() {
 
@@ -27,8 +28,9 @@ class MainActivity : AppCompatActivity() {
             setContentView(view)
             ButterKnife.bind(this@MainActivity)
         }
-        checkPermission()
+//        checkPermission()
 
+        BigBitmapTest().main()
     }
 
     fun checkPermission() {

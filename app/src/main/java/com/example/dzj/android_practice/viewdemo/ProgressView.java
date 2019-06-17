@@ -44,7 +44,6 @@ public class ProgressView extends View {
         paint = new Paint(Paint.ANTI_ALIAS_FLAG);
         paint.setColor(Color.parseColor("#08AEAB"));
         paint.setStrokeCap(Paint.Cap.ROUND);
-        TransitionManager.beginDelayedTransition();
 
     }
 
