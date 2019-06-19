@@ -5,20 +5,14 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
 import android.util.Log
-import androidx.asynclayoutinflater.view.AsyncLayoutInflater
 import androidx.appcompat.app.AppCompatActivity
 import android.view.View
 import android.widget.Toast
-import androidx.annotation.UiThread
 import androidx.core.app.ActivityCompat
 import butterknife.ButterKnife
 import butterknife.OnClick
-import com.example.dzj.android_practice.algorithmdemo.ComposeTest
-import com.example.dzj.android_practice.classdemo.AnnotationTest
-import com.example.dzj.android_practice.concurrentdemo.FutureTest
 import com.example.dzj.android_practice.iodemo.BitmapDecodeTest
-import com.example.dzj.android_practice.networkdemo.RetrofitTest
-import com.example.dzj.android_practice.otherdemo.BigBitmapTest
+import com.example.dzj.android_practice.javademo.JavaTest
 
 class MainActivity : AppCompatActivity() {
 
@@ -29,8 +23,7 @@ class MainActivity : AppCompatActivity() {
             ButterKnife.bind(this@MainActivity)
         }
 //        checkPermission()
-
-        BigBitmapTest().main()
+        JavaTest().main()
     }
 
     fun checkPermission() {

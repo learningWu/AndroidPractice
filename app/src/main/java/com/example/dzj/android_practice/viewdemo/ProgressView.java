@@ -17,6 +17,8 @@ import androidx.annotation.RequiresApi;
 import androidx.constraintlayout.widget.ConstraintSet;
 
 import com.eddie.annotationprocessor.CheckGetAnnotation;
+import com.example.dzj.android_practice.classdemo.AnnotationTest;
+
 @CheckGetAnnotation
 public class ProgressView extends View {
 
@@ -44,7 +46,6 @@ public class ProgressView extends View {
         paint = new Paint(Paint.ANTI_ALIAS_FLAG);
         paint.setColor(Color.parseColor("#08AEAB"));
         paint.setStrokeCap(Paint.Cap.ROUND);
-
     }
 
     public ProgressView(Context context) {

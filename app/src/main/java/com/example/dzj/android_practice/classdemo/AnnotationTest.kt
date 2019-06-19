@@ -4,6 +4,5 @@ import com.eddie.annotationprocessor.CheckGetAnnotation
 
 class AnnotationTest {
     fun main(): Unit {
-
     }
 }
