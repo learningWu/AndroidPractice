@@ -9,12 +9,17 @@ import androidx.appcompat.app.AppCompatActivity
 import android.view.View
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
+import butterknife.BindView
 import butterknife.ButterKnife
 import butterknife.OnClick
 import com.example.dzj.android_practice.iodemo.BitmapDecodeTest
 import com.example.dzj.android_practice.javademo.JavaTest
+import com.example.dzj.android_practice.otherdemo.BigBitmapTest
+import com.example.dzj.android_practice.viewdemo.ProgressView
 
 class MainActivity : AppCompatActivity() {
+    @BindView(R.id.pv)
+    lateinit var pv: ProgressView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,7 +28,8 @@ class MainActivity : AppCompatActivity() {
             ButterKnife.bind(this@MainActivity)
         }
 //        checkPermission()
-        JavaTest().main()
+//        JavaTest().main()
+        BigBitmapTest().main()
     }
 
     fun checkPermission() {
@@ -66,8 +72,9 @@ class MainActivity : AppCompatActivity() {
                 startActivity(intent)
             }
             R.id.tv_to_sub_thread_update_ui_activity -> {
-                val intent = Intent(this@MainActivity, SubThreadUpdateUiActivity::class.java);
-                startActivity(intent)
+//                val intent = Intent(this@MainActivity, SubThreadUpdateUiActivity::class.java);
+//                startActivity(intent)
+                pv.scrollBy(20, 20)
             }
         }
     }

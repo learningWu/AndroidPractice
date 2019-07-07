@@ -1,6 +1,7 @@
 package com.example.dzj.android_practice.otherdemo
 
 import android.graphics.BitmapFactory
+import android.icu.lang.UCharacter.GraphemeClusterBreak.L
 import android.util.Log
 
 class BigBitmapTest {
@@ -18,10 +19,11 @@ class BigBitmapTest {
         var inSampleSize = 1
         var halfHight = height
         var halfWidth = width
-        while ((halfHight / inSampleSize) > requestHeight || (halfWidth / inSampleSize) > requestWidth) {
-            inSampleSize = inSampleSize.shl(2)
-            halfHight = halfHight.shr(2)
-            halfWidth = halfWidth.shr(2)
+        while (halfHight  > requestHeight || halfWidth  > requestWidth) {
+            inSampleSize = inSampleSize.shl(1)
+            halfHight = halfHight.shr(1)
+            halfWidth = halfWidth.shr(1)
+            Log.d("BigBitmap：", "inSample:${inSampleSize}halfHight:${halfHight}halfWidth:${halfWidth}")
         }
         Log.d("BigBitmap：", "" + inSampleSize)
         return inSampleSize
