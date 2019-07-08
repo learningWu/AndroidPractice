@@ -50,6 +50,13 @@ dependencies {
     }
     kapt(rootProject.ext.annotationProcessor["glidecompiler"])
     implementation rootProject.ext.dependencies["haha"]
+    // Litho
+    // Sections
+    implementation 'com.facebook.litho:litho-sections-core:0.28.0'
+    implementation 'com.facebook.litho:litho-sections-widget:0.28.0'
+    compileOnly 'com.facebook.litho:litho-sections-annotations:0.28.0'
+
+    kapt 'com.facebook.litho:litho-sections-processor:0.28.0'
 //    implementation 'org.ow2.asm:asm:6.0'
 //    implementation 'org.ow2.asm:asm-util:6.0'
 }

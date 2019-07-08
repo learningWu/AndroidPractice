@@ -1,8 +1,8 @@
-package com.example.dzj.android_practice
+package com.example.dzj.android_practice.activity
 
 import android.os.Bundle
-import androidx.asynclayoutinflater.view.AsyncLayoutInflater
 import androidx.appcompat.app.AppCompatActivity
+import com.example.dzj.android_practice.R
 
 class RoundLayoutShowActivity : AppCompatActivity() {
 

@@ -5,25 +5,17 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
 import android.util.Log
-import androidx.appcompat.app.AppCompatActivity
 import android.view.View
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
-import androidx.core.content.ContextCompat.startActivity
-import butterknife.BindView
 import butterknife.ButterKnife
 import butterknife.OnClick
-import com.example.dzj.android_practice.R2.id.pv
-import com.example.dzj.android_practice.concurrentdemo.SynchronizeTest
+import com.example.dzj.android_practice.activity.LithoActivity
+import com.example.dzj.android_practice.activity.RoundLayoutShowActivity
 import com.example.dzj.android_practice.iodemo.BitmapDecodeTest
-import com.example.dzj.android_practice.memorydemo.HeapDumpFileTest
-import com.example.dzj.android_practice.viewdemo.ProgressView
 
 class MainActivity : AppCompatActivity() {
-    @BindView(R.id.pv)
-    lateinit var pv: ProgressView
-
-    lateinit var test: HeapDumpFileTest
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,8 +23,6 @@ class MainActivity : AppCompatActivity() {
             setContentView(view)
             ButterKnife.bind(this@MainActivity)
         }
-        test = HeapDumpFileTest(this)
-        test.main()
     }
 
     fun checkPermission() {
@@ -67,17 +57,20 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    @OnClick(R.id.tv_to_round_layout_activity, R.id.tv_to_sub_thread_update_ui_activity)
+    @OnClick(R.id.tv_to_round_layout_activity, R.id.tv_to_sub_thread_update_ui_activity, R.id.tv_to_litho_activity)
     fun onClick(view: View) {
         when (view.id) {
             R.id.tv_to_round_layout_activity -> {
                 val intent = Intent(this@MainActivity, RoundLayoutShowActivity::class.java);
                 startActivity(intent)
             }
+            R.id.tv_to_litho_activity -> {
+                val intent = Intent(this@MainActivity, LithoActivity::class.java);
+                startActivity(intent)
+            }
             R.id.tv_to_sub_thread_update_ui_activity -> {
 //                val intent = Intent(this@MainActivity, SubThreadUpdateUiActivity::class.java);
 //                startActivity(intent)
-                pv.scrollBy(20, 20)
             }
         }
     }

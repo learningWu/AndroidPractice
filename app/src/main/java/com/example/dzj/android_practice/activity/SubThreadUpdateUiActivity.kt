@@ -1,4 +1,4 @@
-package com.example.dzj.android_practice
+package com.example.dzj.android_practice.activity
 
 import android.os.Bundle
 import android.os.Handler
@@ -9,6 +9,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import butterknife.BindView
 import butterknife.ButterKnife
+import com.example.dzj.android_practice.R
 import java.lang.Exception
 import java.util.concurrent.Executors
 

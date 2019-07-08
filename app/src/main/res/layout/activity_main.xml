@@ -19,9 +19,10 @@
         style="@style/actvitiy_main_text"
         android:text="SubThreadUiActivity" />
 
-    <com.example.dzj.android_practice.viewdemo.ProgressView
-        android:id="@+id/pv"
-        android:layout_width="40dp"
-        android:layout_height="40dp" />
+    <TextView
+        android:id="@+id/tv_to_litho_activity"
+        style="@style/actvitiy_main_text"
+        android:text="LithoActivity" />
+
 
 </LinearLayout>
