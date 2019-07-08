@@ -9,16 +9,21 @@ import androidx.appcompat.app.AppCompatActivity
 import android.view.View
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat.startActivity
 import butterknife.BindView
 import butterknife.ButterKnife
 import butterknife.OnClick
+import com.example.dzj.android_practice.R2.id.pv
 import com.example.dzj.android_practice.concurrentdemo.SynchronizeTest
 import com.example.dzj.android_practice.iodemo.BitmapDecodeTest
+import com.example.dzj.android_practice.memorydemo.HeapDumpFileTest
 import com.example.dzj.android_practice.viewdemo.ProgressView
 
 class MainActivity : AppCompatActivity() {
     @BindView(R.id.pv)
     lateinit var pv: ProgressView
+
+    lateinit var test: HeapDumpFileTest
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,9 +31,8 @@ class MainActivity : AppCompatActivity() {
             setContentView(view)
             ButterKnife.bind(this@MainActivity)
         }
-//        checkPermission()
-//        JavaTest().main()
-        SynchronizeTest().main()
+        test = HeapDumpFileTest(this)
+        test.main()
     }
 
     fun checkPermission() {

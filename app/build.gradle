@@ -49,6 +49,7 @@ dependencies {
         exclude group: "com.android.support"
     }
     kapt(rootProject.ext.annotationProcessor["glidecompiler"])
+    implementation rootProject.ext.dependencies["haha"]
 //    implementation 'org.ow2.asm:asm:6.0'
 //    implementation 'org.ow2.asm:asm-util:6.0'
 }
