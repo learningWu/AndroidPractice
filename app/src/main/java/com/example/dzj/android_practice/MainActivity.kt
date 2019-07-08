@@ -12,9 +12,8 @@ import androidx.core.app.ActivityCompat
 import butterknife.BindView
 import butterknife.ButterKnife
 import butterknife.OnClick
+import com.example.dzj.android_practice.concurrentdemo.SynchronizeTest
 import com.example.dzj.android_practice.iodemo.BitmapDecodeTest
-import com.example.dzj.android_practice.javademo.JavaTest
-import com.example.dzj.android_practice.otherdemo.BigBitmapTest
 import com.example.dzj.android_practice.viewdemo.ProgressView
 
 class MainActivity : AppCompatActivity() {
@@ -29,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         }
 //        checkPermission()
 //        JavaTest().main()
-        BigBitmapTest().main()
+        SynchronizeTest().main()
     }
 
     fun checkPermission() {
