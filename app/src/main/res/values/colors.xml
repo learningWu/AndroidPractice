@@ -6,6 +6,8 @@
     <color name="white">#ffffff</color>
     <color name="font">#ffffff</color>
     <color name="font_333333">#333333</color>
+    <color name="font_666666">#666666</color>
+    <color name="font_999999">#999999</color>
     <color name="gray">#e8e8e8</color>
     <color name="black">#000000</color>
 </resources>
