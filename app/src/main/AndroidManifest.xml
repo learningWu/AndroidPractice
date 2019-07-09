@@ -23,7 +23,7 @@
         </activity>
         <activity android:name=".activity.RoundLayoutShowActivity" />
         <activity android:name=".activity.SubThreadUpdateUiActivity" />
-        <activity android:name=".activity.LithoActivity" />
+        <activity android:name=".lithodemo.activity.LithoActivity" />
     </application>
 
 </manifest>

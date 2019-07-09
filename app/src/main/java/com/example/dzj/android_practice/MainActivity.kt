@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import butterknife.ButterKnife
 import butterknife.OnClick
-import com.example.dzj.android_practice.activity.LithoActivity
+import com.example.dzj.android_practice.lithodemo.activity.LithoActivity
 import com.example.dzj.android_practice.activity.RoundLayoutShowActivity
 import com.example.dzj.android_practice.iodemo.BitmapDecodeTest
 

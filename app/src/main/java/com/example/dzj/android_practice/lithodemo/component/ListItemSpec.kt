@@ -1,7 +1,5 @@
-package com.example.dzj.android_practice.viewdemo
+package com.example.dzj.android_practice.lithodemo.component
 
-import android.graphics.Color
-import android.view.View
 import android.widget.ImageView
 import android.widget.Toast
 
@@ -13,16 +11,13 @@ import com.facebook.litho.ClickEvent
 import com.facebook.litho.Column
 import com.facebook.litho.Component
 import com.facebook.litho.ComponentContext
-import com.facebook.litho.EventHandler
 import com.facebook.litho.Row
-import com.facebook.litho.annotations.FromEvent
 import com.facebook.litho.annotations.LayoutSpec
 import com.facebook.litho.annotations.OnCreateLayout
 import com.facebook.litho.annotations.OnEvent
 import com.facebook.litho.annotations.Prop
 import com.facebook.litho.widget.Image
 import com.facebook.litho.widget.Text
-import com.facebook.yoga.YogaEdge
 
 import java.util.ArrayList
 
