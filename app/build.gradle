@@ -7,7 +7,7 @@ android {
     compileSdkVersion 28
     defaultConfig {
         applicationId "com.example.dzj.android_practice"
-        minSdkVersion 15
+        minSdkVersion 16
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
@@ -57,6 +57,7 @@ dependencies {
     compileOnly 'com.facebook.litho:litho-sections-annotations:0.28.0'
 
     kapt 'com.facebook.litho:litho-sections-processor:0.28.0'
+    implementation 'com.airbnb.android:lottie:3.0.7'
 //    implementation 'org.ow2.asm:asm:6.0'
 //    implementation 'org.ow2.asm:asm-util:6.0'
 }

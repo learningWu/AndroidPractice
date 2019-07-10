@@ -19,6 +19,10 @@ import kotlin.collections.HashMap
 import android.R
 import android.graphics.drawable.BitmapDrawable
 
+/**
+ * 对堆进行相同图片分析
+ */
+
 
 class HeapDumpFileTest(var context: Context) {
     //    companion object {

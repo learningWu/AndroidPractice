@@ -24,5 +24,11 @@
         style="@style/actvitiy_main_text"
         android:text="LithoActivity" />
 
-
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animation_view"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="blue-heart.json"
+        app:lottie_loop="true" />
 </LinearLayout>
