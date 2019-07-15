@@ -13,6 +13,8 @@ import butterknife.ButterKnife
 import butterknife.OnClick
 import com.example.dzj.android_practice.lithodemo.activity.LithoActivity
 import com.example.dzj.android_practice.activity.RoundLayoutShowActivity
+import com.example.dzj.android_practice.activity.SubThreadUpdateUiActivity
+import com.example.dzj.android_practice.animationdemo.AnimationShowActivity
 import com.example.dzj.android_practice.iodemo.BitmapDecodeTest
 
 class MainActivity : AppCompatActivity() {
@@ -57,7 +59,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    @OnClick(R.id.tv_to_round_layout_activity, R.id.tv_to_sub_thread_update_ui_activity, R.id.tv_to_litho_activity)
+    @OnClick(R.id.tv_to_round_layout_activity, R.id.tv_to_sub_thread_update_ui_activity, R.id.tv_to_litho_activity,R.id.tv_to_animation_show_activity)
     fun onClick(view: View) {
         when (view.id) {
             R.id.tv_to_round_layout_activity -> {
@@ -71,6 +73,10 @@ class MainActivity : AppCompatActivity() {
             R.id.tv_to_sub_thread_update_ui_activity -> {
 //                val intent = Intent(this@MainActivity, SubThreadUpdateUiActivity::class.java);
 //                startActivity(intent)
+            }
+            R.id.tv_to_animation_show_activity -> {
+                val intent = Intent(this@MainActivity, AnimationShowActivity::class.java);
+                startActivity(intent)
             }
         }
     }
