@@ -6,7 +6,7 @@ import android.util.Log;
 import java.lang.reflect.Field;
 
 public class JavaTest extends Application {
-    public void main(){
+    public void main() {
 //        Field declaredField = Parent.class.getDeclaredField("");
 //        declaredField.get(obj)
     }

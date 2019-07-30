@@ -3,8 +3,9 @@
     package="com.example.dzj.android_practice">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
         android:name=".MyApplication"
         android:allowBackup="true"
@@ -25,6 +26,14 @@
         <activity android:name=".activity.SubThreadUpdateUiActivity" />
         <activity android:name=".lithodemo.activity.LithoActivity" />
         <activity android:name=".animationdemo.AnimationShowActivity" />
+
+        <service
+            android:name=".AIDLdemo.service.AIDLService"
+            android:process=":newProcess">
+            <intent-filter>
+                <action android:name="com.example.dzj.android_practice" />
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>

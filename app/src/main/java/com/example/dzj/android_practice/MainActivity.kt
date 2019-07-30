@@ -16,6 +16,7 @@ import com.example.dzj.android_practice.activity.RoundLayoutShowActivity
 import com.example.dzj.android_practice.activity.SubThreadUpdateUiActivity
 import com.example.dzj.android_practice.animationdemo.AnimationShowActivity
 import com.example.dzj.android_practice.iodemo.BitmapDecodeTest
+import com.example.dzj.android_practice.javademo.JavaTest
 
 class MainActivity : AppCompatActivity() {
 
@@ -25,6 +26,7 @@ class MainActivity : AppCompatActivity() {
             setContentView(view)
             ButterKnife.bind(this@MainActivity)
         }
+        JavaTest().main()
     }
 
     fun checkPermission() {
