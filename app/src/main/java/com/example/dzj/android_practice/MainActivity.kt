@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import butterknife.ButterKnife
 import butterknife.OnClick
+import com.example.dzj.android_practice.AIDLdemo.IpcTest
 import com.example.dzj.android_practice.lithodemo.activity.LithoActivity
 import com.example.dzj.android_practice.activity.RoundLayoutShowActivity
 import com.example.dzj.android_practice.activity.SubThreadUpdateUiActivity
@@ -26,7 +27,8 @@ class MainActivity : AppCompatActivity() {
             setContentView(view)
             ButterKnife.bind(this@MainActivity)
         }
-        JavaTest().main()
+
+        IpcTest().main()
     }
 
     fun checkPermission() {

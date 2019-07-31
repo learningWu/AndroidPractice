@@ -14,6 +14,8 @@ import com.example.dzj.android_practice.IService;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import static com.example.dzj.android_practice.model.User.user;
+
 public class AIDLService extends Service {
     @Nullable
     @Override
@@ -21,6 +23,7 @@ public class AIDLService extends Service {
         return stub;
     }
 
+    private int count;
     IService.Stub stub = new IService.Stub() {
         @Override
         public String getData(String func, String params) throws RemoteException {
@@ -30,8 +33,9 @@ public class AIDLService extends Service {
             switch (func) {
                 case "char":
                     try {
-                        jsonObject.put("name", "mazaizhong");
-                        jsonObject.put("sex", "man");
+                        user.name = "name" + count++;
+                        jsonObject.put("name", user.name);
+                        jsonObject.put("password", user.password);
                         long mills = System.currentTimeMillis();
                         jsonObject.put("time", mills);
                     } catch (JSONException e) {
