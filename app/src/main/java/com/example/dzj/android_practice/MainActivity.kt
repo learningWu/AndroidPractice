@@ -3,9 +3,13 @@ package com.example.dzj.android_practice
 import android.Manifest
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.view.ViewGroup
+import android.widget.FrameLayout
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
@@ -28,9 +32,19 @@ class MainActivity : AppCompatActivity() {
             ButterKnife.bind(this@MainActivity)
         }
 
-        IpcTest().main()
+
+
     }
 
+    override fun onResume() {
+        super.onResume()
+        val viewGroup = window.decorView as ViewGroup
+        val imageView = ImageView(this)
+        imageView.layoutParams = FrameLayout.LayoutParams(100,100)
+        imageView.setBackgroundColor(Color.RED)
+        imageView.elevation=100f
+        viewGroup.addView(imageView)
+    }
     fun checkPermission() {
         //检查权限（NEED_PERMISSION）是否被授权 PackageManager.PERMISSION_GRANTED表示同意授权
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)
@@ -63,7 +77,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    @OnClick(R.id.tv_to_round_layout_activity, R.id.tv_to_sub_thread_update_ui_activity, R.id.tv_to_litho_activity,R.id.tv_to_animation_show_activity)
+    @OnClick(R.id.tv_to_round_layout_activity, R.id.tv_to_sub_thread_update_ui_activity, R.id.tv_to_litho_activity, R.id.tv_to_animation_show_activity)
     fun onClick(view: View) {
         when (view.id) {
             R.id.tv_to_round_layout_activity -> {
