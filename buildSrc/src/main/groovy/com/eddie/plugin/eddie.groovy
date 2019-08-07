@@ -1,5 +1,6 @@
 package com.eddie.plugin
 
+import com.android.build.gradle.BaseExtension
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 
@@ -17,5 +18,8 @@ class eddie implements Plugin<Project> {
                 println '哈哈哈哈'
             }
         })
+
+        def baseExtension = project.extensions.getByType(BaseExtension)
+        baseExtension.registerTransform(new EddieTransform())
     }
 }

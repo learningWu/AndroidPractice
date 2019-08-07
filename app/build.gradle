@@ -3,6 +3,12 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
 apply plugin: 'com.jakewharton.butterknife'
+
+apply plugin: 'com.eddie.plugin.eddie'
+
+eddie {
+    name = 'wzx'
+}
 android {
     compileSdkVersion 28
     defaultConfig {
