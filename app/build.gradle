@@ -26,9 +26,12 @@ android {
         }
         multiDexEnabled true
 
-        sourceSets{
+        sourceSets {
             main {
                 jni.srcDirs = []
+
+                // 加上会报 找不到 libjnitest.so
+//                jniLibs.srcDirs = ['libs']
             }
         }
 
@@ -42,6 +45,20 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+
+    tasks.withType(JavaCompile) {
+        compileTask -> compileTask.dependsOn 'ndkBuild','copyLibsToJniLibs'
+    }
+
+    task ndkBuild(type: Exec) {
+        commandLine "ndk-build", '-C', 'src/main/jni'
+    }
+
+    task copyLibsToJniLibs(type: Copy){
+        from 'src/main/libs/'
+        into 'src/main/jniLibs/'
+        include '**/*.so'
     }
 }
 
