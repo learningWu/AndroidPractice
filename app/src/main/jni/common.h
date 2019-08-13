@@ -1,0 +1,7 @@
+//
+// Created by dzj on 2019-08-13.
+//
+#ifndef ANDROIDPRACTICE_COMMON_H
+#define ANDROIDPRACTICE_COMMON_H
+
+#endif //ANDROIDPRACTICE_COMMON_H

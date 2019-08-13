@@ -48,18 +48,24 @@ android {
     }
 
     tasks.withType(JavaCompile) {
-        compileTask -> compileTask.dependsOn 'ndkBuild','copyLibsToJniLibs'
+        compileTask -> compileTask.dependsOn 'ndkBuild', 'copyLibsToJniLibs'
     }
 
     task ndkBuild(type: Exec) {
         commandLine "ndk-build", '-C', 'src/main/jni'
     }
 
-    task copyLibsToJniLibs(type: Copy){
+    task copyLibsToJniLibs(type: Copy) {
         from 'src/main/libs/'
         into 'src/main/jniLibs/'
         include '**/*.so'
     }
+//    externalNativeBuild {
+//        ndkBuild {
+//            path file('src/main/jni/Android.mk')
+//        }
+//    }
+//    sourceSets { main { jni.srcDirs = ['src/main/jni', 'src/main/jni/'] } }
 }
 
 dependencies {
