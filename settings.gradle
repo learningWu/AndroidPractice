@@ -1,1 +1,1 @@
-include ':app', ':annotationprocessor', ':client'
+include ':app', ':annotationprocessor', ':client', ':hotfixdemo'
