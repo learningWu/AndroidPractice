@@ -1,1 +1,1 @@
-include ':app', ':annotationprocessor', ':client', ':hotfixdemo'
+include ':app', ':annotationprocessor', ':client', ':hotfixdemo', ':opengldemo'
