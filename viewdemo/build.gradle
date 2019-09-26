@@ -3,68 +3,32 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
 apply plugin: 'com.jakewharton.butterknife'
-
-apply plugin: 'com.eddie.plugin.eddie'
-
-eddie {
-    name = 'wzx'
-}
 android {
     compileSdkVersion 28
+
+
     defaultConfig {
-        applicationId "com.example.dzj.android_practice"
-        minSdkVersion 21
+        applicationId "com.eddie.viewdemo"
+        minSdkVersion 22
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
+
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        //添加如下配置就OK了
-        javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
-        compileOptions {
-            sourceCompatibility JavaVersion.VERSION_1_8
-            targetCompatibility JavaVersion.VERSION_1_8
-        }
-
-        sourceSets {
-            main {
-                jni.srcDirs = []
-
-                // 加上会报 找不到 libjnitest.so
-//                jniLibs.srcDirs = ['libs']
-            }
-        }
-
-        ndk {
-            moduleName "jnitest"
-        }
 
     }
+
     buildTypes {
         release {
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-
-    tasks.withType(JavaCompile) {
-        compileTask -> compileTask.dependsOn 'ndkBuild', 'copyLibsToJniLibs'
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
     }
 
-    task ndkBuild(type: Exec) {
-        commandLine "ndk-build", '-C', 'src/main/jni'
-    }
-
-    task copyLibsToJniLibs(type: Copy) {
-        from 'src/main/libs/'
-        into 'src/main/jniLibs/'
-        include '**/*.so'
-    }
-//    externalNativeBuild {
-//        ndkBuild {
-//            path file('src/main/jni/Android.mk')
-//        }
-//    }
-//    sourceSets { main { jni.srcDirs = ['src/main/jni', 'src/main/jni/'] } }
 }
 
 dependencies {
@@ -93,7 +57,4 @@ dependencies {
     implementation 'com.airbnb.android:lottie:3.0.7'
 //    implementation 'org.ow2.asm:asm:6.0'
 //    implementation 'org.ow2.asm:asm-util:6.0'
-}
-repositories {
-    mavenCentral()
 }

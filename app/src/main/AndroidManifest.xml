@@ -24,7 +24,6 @@
         </activity>
         <activity android:name=".activity.RoundLayoutShowActivity" />
         <activity android:name=".activity.SubThreadUpdateUiActivity" />
-        <activity android:name=".lithodemo.activity.LithoActivity" />
         <activity android:name=".animationdemo.AnimationShowActivity" />
 
         <service

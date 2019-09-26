@@ -15,13 +15,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import butterknife.ButterKnife
 import butterknife.OnClick
-import com.example.dzj.android_practice.AIDLdemo.IpcTest
-import com.example.dzj.android_practice.lithodemo.activity.LithoActivity
 import com.example.dzj.android_practice.activity.RoundLayoutShowActivity
-import com.example.dzj.android_practice.activity.SubThreadUpdateUiActivity
 import com.example.dzj.android_practice.animationdemo.AnimationShowActivity
 import com.example.dzj.android_practice.iodemo.BitmapDecodeTest
-import com.example.dzj.android_practice.javademo.JavaTest
 import com.example.dzj.android_practice.jnidemo.JniTest
 
 class MainActivity : AppCompatActivity() {
@@ -82,10 +78,6 @@ class MainActivity : AppCompatActivity() {
         when (view.id) {
             R.id.tv_to_round_layout_activity -> {
                 val intent = Intent(this@MainActivity, RoundLayoutShowActivity::class.java);
-                startActivity(intent)
-            }
-            R.id.tv_to_litho_activity -> {
-                val intent = Intent(this@MainActivity, LithoActivity::class.java);
                 startActivity(intent)
             }
             R.id.tv_to_sub_thread_update_ui_activity -> {
